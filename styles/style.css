@@ -10,13 +10,13 @@ html {
 
 .page {
   display: block;
-  inline-size: 1200px;
-  block-size: 100%;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  inline-size: 1200px;
+  block-size: 100%;
 }
 
 h1,
@@ -39,8 +39,8 @@ ol {
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 a:-webkit-any-link:focus-visible {
@@ -49,10 +49,10 @@ a:-webkit-any-link:focus-visible {
 
 .visually-hidden {
   position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
 }
@@ -84,6 +84,7 @@ a:-webkit-any-link:focus-visible {
 .content__list {
   position: relative;
   height: 298px;
+  padding: 3px;
   overflow-y: auto;
 }
 
@@ -148,8 +149,8 @@ a:-webkit-any-link:focus-visible {
 
 .title {
   font-family: "Oswald";
-  font-size: 75px;
   font-weight: 700;
+  font-size: 75px;
   line-height: 70.5px;
   text-transform: uppercase;
 }
@@ -160,18 +161,18 @@ a:-webkit-any-link:focus-visible {
 }
 
 .search-form__fieldset-title {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21.6px;
   margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.6px;
 }
 
 .content__video-card-title {
-  font-family: "Oswald";
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 30px;
   margin-bottom: 6px;
+  font-family: "Oswald";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
 }
 
 .content__video-card-description {
@@ -185,24 +186,24 @@ a:-webkit-any-link:focus-visible {
 
 .search-form__textfield {
   width: 225px;
-  font-family: "Fira Sans Condensed";
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21.6px;
-  color: rbg(255 255 255 / .7);
-  appearance: none;
-  background-color: transparent;
-  color: white;
   border-top: 1px solid white;
-  border-bottom: 1px solid white;
   border-right: none;
+  border-bottom: 1px solid white;
   border-left: none;
   padding: 2.5px 14px 2.5px 0;
+  color: rbg(255 255 255 / .7);
+  color: white;
+  font-family: "Fira Sans Condensed";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.6px;
+  background-color: transparent;
+  appearance: none;
 }
 
 .search-form__textfield:active {
-  border-left: 1px solid white;
   border-right: 1px solid white;
+  border-left: 1px solid white;
 }
 
 .search-form__textfield:focus {
@@ -218,8 +219,8 @@ a:-webkit-any-link:focus-visible {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 5px;
   width: 59px;
-  gap: 7px;
   width: fit-content;
 }
 
@@ -234,33 +235,33 @@ a:-webkit-any-link:focus-visible {
 
 .search-form__pseudo-checkbox {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 19px;
   height: 19px;
-  background-color: transparent;
   border: 1px solid white;
+  background-color: transparent;
   cursor: pointer;
 }
 
 input[type="checkbox"]:checked + span::after,
 .search-form__pseudo-checkbox:active::after {
   content: "";
+  display: block;
   width: 15px;
   height: 15px;
   background-color: white;
-  position: absolute;
-  top: 1px;
-  left: 1px;
 }
 
 .button {
-  background-color: transparent;
+  height: 34px;
   border: 1px solid white;
   color: white;
-  height: 34px;
-  font-size: 18px;
   font-weight: 700;
+  font-size: 18px;
   line-height: 21.6px;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -282,8 +283,8 @@ input[type="checkbox"]:checked + span::after,
 }
 
 .search-form__submit-button {
-  width: 194px;
   align-self: end;
+  width: 194px;
 }
 
 .more-button {

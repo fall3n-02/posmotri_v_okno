@@ -9,7 +9,9 @@ html {
 }
 
 .page {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -57,18 +59,11 @@ a:-webkit-any-link:focus-visible {
   white-space: nowrap;
 }
 
-.page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .content {
   display: flex;
   align-items: end;
   gap: 30px;
   width: 1140px;
-  height: 534px;
 }
 
 .search-form {
@@ -88,10 +83,6 @@ a:-webkit-any-link:focus-visible {
   overflow-y: auto;
 }
 
-.title { 
-  margin-bottom: 26px;
-}
-
 .result__video-container {
   position: relative;
   width: 711px;
@@ -103,6 +94,7 @@ a:-webkit-any-link:focus-visible {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .content__card-link {
@@ -110,6 +102,7 @@ a:-webkit-any-link:focus-visible {
   margin: 2px;
 }
 
+.content__card-link:active,
 .content__card-link_current {
   background-color: #545050;
 }
@@ -142,13 +135,14 @@ a:-webkit-any-link:focus-visible {
 }
 
 .content__video-card-description-container {
-  width: 100%;
+  flex-grow: 1;
   margin-top: 2px;
   margin-left: 2px;
 }
 
 .title {
-  font-family: "Oswald";
+  margin-bottom: 26px;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 70.5px;
@@ -169,10 +163,14 @@ a:-webkit-any-link:focus-visible {
 
 .content__video-card-title {
   margin-bottom: 6px;
-  font-family: "Oswald";
+  overflow: hidden;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .content__video-card-description {
@@ -193,7 +191,7 @@ a:-webkit-any-link:focus-visible {
   padding: 2.5px 14px 2.5px 0;
   color: rbg(255 255 255 / .7);
   color: white;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 21.6px;
@@ -222,6 +220,7 @@ a:-webkit-any-link:focus-visible {
   gap: 5px;
   width: 59px;
   width: fit-content;
+  cursor: pointer;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -242,7 +241,6 @@ a:-webkit-any-link:focus-visible {
   height: 19px;
   border: 1px solid white;
   background-color: transparent;
-  cursor: pointer;
 }
 
 input[type="checkbox"]:checked + span::after,
@@ -258,6 +256,7 @@ input[type="checkbox"]:checked + span::after,
   height: 34px;
   border: 1px solid white;
   color: white;
+  font-family: inherit;
   font-weight: 700;
   font-size: 18px;
   line-height: 21.6px;

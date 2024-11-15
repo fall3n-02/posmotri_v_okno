@@ -162,6 +162,7 @@ a:-webkit-any-link:focus-visible {
 }
 
 .content__video-card-title {
+  width: 200px;
   margin-bottom: 6px;
   overflow: hidden;
   font-family: "Oswald", sans-serif;
